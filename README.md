@@ -18,7 +18,7 @@ A growing collection of maps exploring open data, geographic patterns and differ
 
 **[Browse the map gallery →](https://ferdes16.github.io/challenge/)**
 
-- **[Day 06 · Vintage — Almería in pastel red](https://ferdes16.github.io/maps/2026/day-06-vintage/)**: a contemporary city portrait inspired by vintage prints, combining streets, building footprints and the harbour in a restrained pastel palette. Created in R using OpenStreetMap data.
+- **[Day 01 · Points — Freiburg: City Trees](https://ferdes16.github.io/maps/2026/day-01-freiburg-trees/)**: 45,413 registered public trees, grouped by botanical genus and mapped against a fine street network. Created in R using official open data from Stadt Freiburg.
 
 ## Areas of interest
 

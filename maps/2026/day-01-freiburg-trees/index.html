@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Freiburg — City Trees · Day 01 · Points</title>
+  <meta name="description" content="A map of 45,413 registered public trees in Freiburg, grouped by botanical genus. Made in R with official municipal open data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css?v=9">
+</head>
+<body class="map-detail-page">
+  <header>
+    <a class="brand" href="../../../index.html" aria-label="Home">HOME</a>
+    <nav class="top" aria-label="Main navigation"><a href="../../../index.html#work">PROJECTS</a><a href="../../../index.html#about">ABOUT</a><a href="../../../index.html#contact">CONTACT</a></nav>
+  </header>
+  <main class="map-detail-main">
+    <a class="back-link" href="../../../challenge/">← Back to the gallery</a>
+    <div class="detail-title">
+      <div class="eyebrow">#30DAYMAPCHALLENGE / 2026 / DAY 01 / POINTS</div>
+      <h1>Freiburg — City Trees</h1>
+    </div>
+    <div class="detail-overview">
+      <figure class="map-preview">
+        <a href="map.png" target="_blank" rel="noopener" aria-label="View the full-size map">
+          <img src="thumbnail.png" width="1400" height="867" alt="Freiburg public trees shown as coloured points on a dark map with fine grey streets. The right-hand legend lists five leading genera, other genera and their counts.">
+        </a>
+        <figcaption>Map preview · Select the image to view it at full size.</figcaption>
+      </figure>
+      <div class="detail-summary">
+        <h2>A city revealed by its trees.</h2>
+        <p>45,413 distinct tree inventory records trace streets, neighbourhoods and green spaces across Freiburg. The five most common botanical genera each have their own colour; all remaining genera form a sixth group. Fine grey streets provide orientation.</p>
+        <dl class="detail-meta">
+          <div><dt>Location</dt><dd>Freiburg im Breisgau, Germany</dd></div>
+          <div><dt>Challenge</dt><dd>Day 01 · Points</dd></div>
+          <div><dt>Tools</dt><dd>R · sf · ggplot2 · ragg</dd></div>
+          <div><dt>Data</dt><dd>Stadt Freiburg · Retrieved 1 November 2026</dd></div>
+        </dl>
+        <div class="detail-actions">
+          <a class="btn" href="map.png" target="_blank" rel="noopener">VIEW FULL IMAGE ↗</a>
+          <a class="btn" href="map.pdf" download>DOWNLOAD PDF ↓</a>
+          <a class="btn" href="tree-counts.csv" download>GENUS COUNTS ↓</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail-notes">
+      <section aria-labelledby="idea-heading">
+        <h2 id="idea-heading">The idea</h2>
+        <p>Explore the city through its public trees. Rather than mapping canopy cover, this composition places individual inventory records at the centre of the story. Colour reveals the distribution of maples, lindens, plane trees, cherries and plums, and oaks. Together, these five genera account for 58.1% of the mapped records.</p>
+      </section>
+      <section aria-labelledby="method-heading">
+        <h2 id="method-heading">How it was made</h2>
+        <p>The official tree inventory and municipal street network were downloaded through WFS services. In R, 189 completely identical records were removed from the 45,602 source features, leaving 45,413 distinct records. Inventory numbers alone were not used for deduplication. Botanical names were grouped by genus and the five most frequent genera selected. Counts and percentages use the same records shown on the map, projected to ETRS89 / UTM zone 32N (EPSG:25832).</p>
+      </section>
+      <section aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; limitations</h2>
+        <p>Trees: <a href="https://www.daten-bw.de/suche/daten/auszug-aus-dem-baumkataster-der-freiburg-i-br">official Freiburg public-tree inventory</a>. Streets: <a href="https://www.govdata.de/suche/daten/strassennetz-der-stadt-freiburg-i-brfa3d7">municipal street network</a>. Both were retrieved on 1 November 2026 and are provided under <a href="https://www.govdata.de/dl-de/by-2-0">Datenlizenz Deutschland – Namensnennung 2.0</a>. The inventory covers public land managed by the municipal Garten- und Tiefbauamt; it is not a census of every tree in Freiburg. Groups represent botanical genera, not individual species. Point size does not encode tree height or canopy size, and dense points may overlap.</p>
+      </section>
+    </div>
+  </main>
+  <footer>GIS &amp; DATA VISUALIZATION PORTFOLIO — MAP BY FERNANDO FERNANDEZ · <a href="https://x.com/MappedByFer">@MAPPEDBYFER</a> · DATA: <a href="https://www.freiburg.de">STADT FREIBURG</a> · <a href="https://www.govdata.de/dl-de/by-2-0">DL-DE/BY-2-0</a></footer>
+</body>
+</html>
