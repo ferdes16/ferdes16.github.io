@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Germany’s Traffic Intensity · Day 02 · Lines</title>
+  <meta name="description" content="Germany’s motorways and major roads mapped by modelled daily vehicle traffic. A static map made in R for Day 02 — Lines of the 30DayMapChallenge 2026.">
+  <link rel="canonical" href="https://mappedbyfer.com/maps/2026/day-02-germany-road-traffic/">
+  <meta property="og:title" content="Germany’s Traffic Intensity · MappedByFer">
+  <meta property="og:description" content="A glowing portrait of Germany’s road network, with seven classes of modelled daily vehicle traffic.">
+  <meta property="og:image" content="https://mappedbyfer.com/maps/2026/day-02-germany-road-traffic/thumbnail.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css?v=9">
+</head>
+<body class="map-detail-page">
+  <header>
+    <a class="brand" href="../../../index.html" aria-label="Home">HOME</a>
+    <nav class="top" aria-label="Main navigation"><a href="../../../index.html#work">PROJECTS</a><a href="../../../index.html#about">ABOUT</a><a href="../../../index.html#contact">CONTACT</a></nav>
+  </header>
+  <main class="map-detail-main">
+    <a class="back-link" href="../../../challenge/">← Back to the gallery</a>
+    <div class="detail-title">
+      <div class="eyebrow">#30DAYMAPCHALLENGE / 2026 / DAY 02 / LINES</div>
+      <h1>Germany’s Traffic Intensity</h1>
+    </div>
+    <div class="detail-overview">
+      <figure class="map-preview">
+        <a href="map.png" target="_blank" rel="noopener" aria-label="View the full-size map">
+          <img src="thumbnail.png" width="1600" height="1200" alt="Germany’s road network on a charcoal background. Seven cyan and mint line classes become thicker and brighter with modelled daily vehicle traffic; the busiest corridors stand out around major urban regions.">
+        </a>
+        <figcaption>Map preview · Select the image to view it at full size.</figcaption>
+      </figure>
+      <div class="detail-summary">
+        <h2>Germany’s roads, traced in traffic.</h2>
+        <p>446,471 road segments reveal the structure of Germany’s motorways and major roads. Seven classes of modelled daily vehicle traffic turn faint cyan roads into thicker, luminous mint corridors as estimated volumes rise.</p>
+        <dl class="detail-meta">
+          <div><dt>Location</dt><dd>Germany</dd></div>
+          <div><dt>Challenge</dt><dd>Day 02 · Lines · 2026</dd></div>
+          <div><dt>Tools</dt><dd>R · DuckDB · sf · grid · ragg</dd></div>
+          <div><dt>Data</dt><dd>G-SWIFT / NILU–KNMI · Modelled daily traffic</dd></div>
+        </dl>
+        <div class="detail-actions">
+          <a class="btn" href="map.png" target="_blank" rel="noopener">VIEW FULL IMAGE ↗</a>
+          <a class="btn" href="map.png" download>DOWNLOAD PNG ↓</a>
+          <a class="btn" href="traffic-classes.csv" download>TRAFFIC CLASSES ↓</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail-notes">
+      <section aria-labelledby="idea-heading">
+        <h2 id="idea-heading">The idea</h2>
+        <p>Show how the intensity of road traffic shapes a national network. A dark composition lets quieter roads recede while the busiest modelled connections emerge through width, light and a restrained glow. The map explores traffic volume, rather than congestion or network centrality.</p>
+      </section>
+      <section aria-labelledby="method-heading">
+        <h2 id="method-heading">How it was made</h2>
+        <p>The published GeoParquet was read with DuckDB in R, selecting OSM motorway, trunk, primary and secondary roads and their connectors. For each source link, modelled light-vehicle and heavy-vehicle daily traffic were added. The resulting values were grouped into seven classes, from below 5,000 to 60,000+ vehicles per day. Geometry was projected to ETRS89 / LAEA Europe (EPSG:3035) and simplified by 15 metres. Flat line caps and reduced halos on very short components limit dot-like rendering artifacts without removing road segments or changing traffic values.</p>
+      </section>
+      <section aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; limitations</h2>
+        <p>Traffic: <a href="https://doi.org/10.5281/zenodo.22638377">Markelj, Grythe, Schneider, Mijling &amp; Lopez-Aparicio — Modelled Light and Heavy duty Annual Daily Traffic on all European roads</a>, v1, NILU / KNMI, published 7 September 2026, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Road geometry derives from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>; contextual borders are from <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a>. Values are model estimates, not live observations or measured counts at every segment. The catalogue does not specify a common traffic reference year. Separate carriageways may be separate source links; values must not be added into a national vehicle total. Higher volume does not necessarily mean congestion.</p>
+      </section>
+    </div>
+  </main>
+  <footer>GIS &amp; DATA VISUALIZATION PORTFOLIO — MAP BY FERNANDO FERNANDEZ · <a href="https://x.com/MappedByFer">@MAPPEDBYFER</a> · DATA: <a href="https://doi.org/10.5281/zenodo.22638377">MARKELJ ET AL. / NILU–KNMI</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://www.openstreetmap.org/copyright">© OPENSTREETMAP CONTRIBUTORS</a></footer>
+</body>
+</html>

@@ -20,6 +20,8 @@ A growing collection of maps exploring open data, geographic patterns and differ
 
 - **[Day 01 · Points — Freiburg: City Trees](https://ferdes16.github.io/maps/2026/day-01-freiburg-trees/)**: 45,413 registered public trees, grouped by botanical genus and mapped against a fine street network. Created in R using official open data from Stadt Freiburg.
 
+- **[Day 02 · Lines — Germany’s Traffic Intensity](https://mappedbyfer.com/maps/2026/day-02-germany-road-traffic/)**: Germany’s motorways and major roads mapped through seven classes of modelled daily vehicle traffic. Created in R using G-SWIFT / NILU–KNMI data and OSM-derived road geometry.
+
 ## Areas of interest
 
 - Spatial data engineering and geospatial analysis.
