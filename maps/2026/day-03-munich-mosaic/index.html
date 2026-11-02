@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Munich — Cadastral Mosaic · Day 03 · Polygons</title>
+  <meta name="description" content="29,601 cadastral footprints form a colourful portrait of central Munich, with the Isar and parks in cream. Day 03 — Polygons, 30DayMapChallenge 2026.">
+  <link rel="canonical" href="https://mappedbyfer.com/maps/2026/day-03-munich-mosaic/">
+  <meta property="og:title" content="Munich — Cadastral Mosaic · MappedByFer">
+  <meta property="og:description" content="A colourful building mosaic of central Munich, using official Bavarian cadastral data.">
+  <meta property="og:image" content="https://mappedbyfer.com/maps/2026/day-03-munich-mosaic/thumbnail.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css?v=9">
+</head>
+<body class="map-detail-page">
+  <header>
+    <a class="brand" href="../../../index.html" aria-label="Home">HOME</a>
+    <nav class="top" aria-label="Main navigation"><a href="../../../index.html#work">PROJECTS</a><a href="../../../index.html#about">ABOUT</a><a href="../../../index.html#contact">CONTACT</a></nav>
+  </header>
+  <main class="map-detail-main">
+    <a class="back-link" href="../../../challenge/">← Back to the gallery</a>
+    <div class="detail-title">
+      <div class="eyebrow">#30DAYMAPCHALLENGE / 2026 / DAY 03 / POLYGONS</div>
+      <h1>Munich — Cadastral Mosaic</h1>
+    </div>
+    <div class="detail-overview">
+      <figure class="map-preview">
+        <a href="map.png" target="_blank" rel="noopener" aria-label="View the full-size Munich map">
+          <img src="thumbnail.png" width="1500" height="1800" alt="A portrait of central Munich on warm cream paper. Individual cadastral footprints form a mosaic in teal, petrol blue, coral, mint and sand. The Isar river and parks are filled in cream, revealing the open spaces between urban blocks.">
+        </a>
+        <figcaption>Map preview · Select the image to view it at full size.</figcaption>
+      </figure>
+      <div class="detail-summary">
+        <h2>Munich, shaped by its buildings.</h2>
+        <p>29,601 cadastral footprints trace a 5 × 5 km view of central Munich around Marienplatz. Teal, petrol blue, coral, mint and sand bring out the geometry of urban blocks, while the Isar and parks form a quieter layer in cream.</p>
+        <dl class="detail-meta">
+          <div><dt>Location</dt><dd>Munich, Germany · Central 5 × 5 km</dd></div>
+          <div><dt>Challenge</dt><dd>Day 03 · Polygons · 2026</dd></div>
+          <div><dt>Tools</dt><dd>R · sf · ggplot2 · grid · ragg</dd></div>
+          <div><dt>Data</dt><dd>Bayerische Vermessungsverwaltung · ALKIS</dd></div>
+        </dl>
+        <div class="detail-actions">
+          <a class="btn" href="map.png" target="_blank" rel="noopener">VIEW FULL IMAGE ↗</a>
+          <a class="btn" href="map.png" download>DOWNLOAD PNG ↓</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail-notes">
+      <section aria-labelledby="idea-heading">
+        <h2 id="idea-heading">The idea</h2>
+        <p>Explore the city's form through its individual building footprints: dense blocks, courtyards and larger structures contrast with parks and water. The palette is decorative; colours do not encode building age, use, height or value. The composition draws inspiration from <a href="https://tjukanov.org/qgis-styles">Topi Tjukanov's QGIS polygon styles</a>, while preserving the cadastral footprint shapes.</p>
+      </section>
+      <section aria-labelledby="method-heading">
+        <h2 id="method-heading">How it was made</h2>
+        <p>The official Upper Bavaria footprint archive was filtered to Munich municipality, retaining 316,178 footprint records. A 5 × 5 km square centred on Marienplatz was clipped in ETRS89 / UTM 32N (EPSG:25832), leaving 29,601 records. A stable hash assigns each footprint to one of five decorative colour groups. A separate cadastral land-use layer adds 53 water polygons and 477 park and green-area polygons beneath the buildings. All displayed geometries passed validity checks. The selected poster was rendered in R at 3000 × 3600 pixels.</p>
+      </section>
+      <section aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; limitations</h2>
+        <p>Data: <strong>Bayerische Vermessungsverwaltung – <a href="https://www.geodaten.bayern.de/">www.geodaten.bayern.de</a></strong>. Footprints: <a href="https://geodaten.bayern.de/opengeodata/OpenDataDetail.html?pn=hausumringe">ALKIS Hausumringe</a>. Water and parks: <a href="https://geodaten.bayern.de/opengeodata/OpenDataDetail.html?pn=tatsaechlichenutzung">ALKIS Tatsächliche Nutzung</a>. Both datasets are used under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; geometries were cropped and recoloured. Downloaded 2 November 2026; archive files are dated 1 October 2026 for footprints and 15 October 2026 for land use. These are not per-building construction dates. Footprints include certain other structures and do not represent dwellings. The poster shows only central Munich. Parks follow cadastral park and green-area classes, which do not include every vegetated surface.</p>
+      </section>
+    </div>
+  </main>
+  <footer>MAP BY FERNANDO FERNANDEZ · <a href="https://x.com/mappedbyfer">@MAPPEDBYFER</a> · DATA: <a href="https://www.geodaten.bayern.de/">BAYERISCHE VERMESSUNGSVERWALTUNG</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></footer>
+</body>
+</html>
