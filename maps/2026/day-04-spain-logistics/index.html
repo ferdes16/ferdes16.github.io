@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Logistics clusters across Spain · Day 04 · Clusters</title>
+  <meta name="description" content="25,249 OpenStreetMap storage and logistics objects reveal patterns across mainland Spain through a luminous density map. Day 04 — Clusters, 30DayMapChallenge 2026.">
+  <link rel="canonical" href="https://mappedbyfer.com/maps/2026/day-04-spain-logistics/">
+  <meta property="og:title" content="Logistics clusters across Spain · MappedByFer">
+  <meta property="og:description" content="A dark, mint-lit map of specifically tagged warehouses, logistics and trucking objects in mainland Spain.">
+  <meta property="og:image" content="https://mappedbyfer.com/maps/2026/day-04-spain-logistics/thumbnail.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css?v=9">
+</head>
+<body class="map-detail-page">
+  <header>
+    <a class="brand" href="../../../index.html" aria-label="Home">HOME</a>
+    <nav class="top" aria-label="Main navigation"><a href="../../../index.html#work">PROJECTS</a><a href="../../../index.html#about">ABOUT</a><a href="../../../index.html#contact">CONTACT</a></nav>
+  </header>
+  <main class="map-detail-main">
+    <a class="back-link" href="../../../challenge/">← Back to the gallery</a>
+    <div class="detail-title">
+      <div class="eyebrow">#30DAYMAPCHALLENGE / 2026 / DAY 04 / CLUSTERS</div>
+      <h1>Logistics clusters across Spain</h1>
+    </div>
+    <div class="detail-overview">
+      <figure class="map-preview">
+        <a href="map.png" target="_blank" rel="noopener" aria-label="View the full-size Spain logistics map">
+          <img src="thumbnail.png" width="1200" height="1350" alt="Mainland Spain on a dark background, with cyan and mint density glow and tiny points showing concentrations of OSM-tagged storage and logistics objects. Faint grey motorways and trunk roads provide context.">
+        </a>
+        <figcaption>Map preview · Select the image to view it at full size.</figcaption>
+      </figure>
+      <div class="detail-summary">
+        <h2>A geography of mapped storage.</h2>
+        <p>25,249 OpenStreetMap objects form a luminous portrait of storage and logistics across mainland Spain. Fine points locate individual mapped features, while a smooth mint glow reveals where they concentrate. Motorways and trunk roads provide a faint geographic reference.</p>
+        <dl class="detail-meta">
+          <div><dt>Location</dt><dd>Mainland Spain</dd></div>
+          <div><dt>Challenge</dt><dd>Day 04 · Clusters · 2026</dd></div>
+          <div><dt>Tools</dt><dd>R · sf · dbscan · MASS · ggplot2 · ragg</dd></div>
+          <div><dt>Data</dt><dd>OpenStreetMap via Geofabrik · 3 November 2026</dd></div>
+        </dl>
+        <div class="detail-actions">
+          <a class="btn" href="map.png" target="_blank" rel="noopener">VIEW FULL IMAGE ↗</a>
+          <a class="btn" href="map.png" download>DOWNLOAD PNG ↓</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail-notes">
+      <section aria-labelledby="idea-heading">
+        <h2 id="idea-heading">The idea</h2>
+        <p>Explore where specifically tagged warehouses, logistics and trucking objects concentrate. The glow shows the density of mapped objects, with each observation weighted equally. It does not measure freight volume, operating capacity or economic importance. Roads add context; they do not represent observed flows between clusters.</p>
+      </section>
+      <section aria-labelledby="method-heading">
+        <h2 id="method-heading">How it was made</h2>
+        <p>The Spain OSM extract was filtered for <code>building=warehouse</code>, <code>building:use=warehouse</code> and <code>industrial=warehouse/logistics/trucking</code>; general industrial land alone was excluded. Geometries were repaired, duplicate objects removed and polygons converted to interior points. Analysis uses EPSG:3035 in metres: DBSCAN with a 3 km radius and 10-point minimum, plus Gaussian KDE with an 8 km standard deviation on an approximately 2 km grid. Brightness encodes objects per km² with square-root scaling; the top 0.1% of positive land density values share the marked upper colour limit. The selected poster is 4800 × 5400 pixels. <a href="workflow.zip" download>Download the reproducible R workflow and validation reports (ZIP)</a>.</p>
+      </section>
+      <section aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; limitations</h2>
+        <p>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, via the <a href="https://download.geofabrik.de/europe/spain.html">Geofabrik Spain extract</a> of 3 November 2026, under <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>. Outline: <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth, public domain</a>. Regional tagging and mapping completeness vary. Small storage buildings account for many observations, and warehouse tags do not confirm current logistics operations. The map is not a verified inventory of active logistics centres. Smoothing and coastal clipping also affect the visible pattern.</p>
+      </section>
+    </div>
+  </main>
+  <footer>MAP BY FERNANDO FERNANDEZ · <a href="https://x.com/mappedbyfer">@MAPPEDBYFER</a> · DATA: <a href="https://www.openstreetmap.org/copyright">© OPENSTREETMAP CONTRIBUTORS</a> / GEOFABRIK · <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a></footer>
+</body>
+</html>

@@ -33,6 +33,17 @@
     "url": "maps/2026/day-03-munich-mosaic/index.html"
   },
   {
+    "id": "2026-04-spain-logistics",
+    "edition": 2026,
+    "day": 4,
+    "theme": "Clusters",
+    "title": "Logistics clusters across Spain",
+    "description": "25,249 OpenStreetMap storage and logistics objects form a luminous density map of mainland Spain, with subtle motorway and trunk-road context.",
+    "status": "published",
+    "thumbnail": "maps/2026/day-04-spain-logistics/thumbnail.png",
+    "url": "maps/2026/day-04-spain-logistics/index.html"
+  },
+  {
     "id": "2026-06-vintage",
     "edition": 2026,
     "day": 6,
