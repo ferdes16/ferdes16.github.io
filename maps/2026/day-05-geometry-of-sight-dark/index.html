@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HOW FAR CAN YOU SEE? · Day 05 · Senses: Sight</title>
+  <meta name="description" content="8,833 calculated viewpoints reveal potential visible space across Barcelona’s Eixample. Day 05 — Senses: Sight, 30DayMapChallenge 2026.">
+  <link rel="canonical" href="https://mappedbyfer.com/maps/2026/day-05-geometry-of-sight-dark/">
+  <meta property="og:title" content="HOW FAR CAN YOU SEE? · MappedByFer">
+  <meta property="og:description" content="A dark map of street-level visibility across Barcelona’s Eixample, calculated from real OpenStreetMap building footprints.">
+  <meta property="og:image" content="https://mappedbyfer.com/maps/2026/day-05-geometry-of-sight-dark/thumbnail.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css?v=9">
+</head>
+<body class="map-detail-page">
+  <header>
+    <a class="brand" href="../../../index.html" aria-label="Home">HOME</a>
+    <nav class="top" aria-label="Main navigation"><a href="../../../index.html#work">PROJECTS</a><a href="../../../index.html#about">ABOUT</a><a href="../../../index.html#contact">CONTACT</a></nav>
+  </header>
+  <main class="map-detail-main">
+    <a class="back-link" href="../../../challenge/">← Back to the gallery</a>
+    <div class="detail-title">
+      <div class="eyebrow">#30DAYMAPCHALLENGE / 2026 / DAY 05 / SENSES: SIGHT</div>
+      <h1>HOW FAR CAN YOU SEE?</h1>
+    </div>
+    <div class="detail-overview">
+      <figure class="map-preview">
+        <a href="map.png" target="_blank" rel="noopener" aria-label="View the full-size Eixample visibility map">
+          <img src="thumbnail.png" width="1200" height="1440" alt="A dark portrait map of Barcelona’s Eixample, with chamfered building blocks in slate. Streets and open spaces are coloured from blue-grey through mint to gold according to calculated visible area. Wider openings along Passeig de Gràcia stand out in pale mint and gold.">
+        </a>
+        <figcaption>Map preview · Select the image to view it at full size.</figcaption>
+      </figure>
+      <div class="detail-summary">
+        <h2>A city seen from 8,833 viewpoints.</h2>
+        <p>Barcelona’s regular Eixample grid holds a changing geography of potential views. This 700 × 700 m map calculates visibility across streets and open spaces, including the interiors of broad junctions and plazas. Colour shows <strong>visible area in m²</strong> within a shared 150 m sight limit, using actual building footprints as obstacles.</p>
+        <dl class="detail-meta">
+          <div><dt>Location</dt><dd>Eixample, Barcelona · 700 × 700 m</dd></div>
+          <div><dt>Challenge</dt><dd>Day 05 · Senses: Sight · 2026</dd></div>
+          <div><dt>Tools</dt><dd>R · sf · Rcpp · ggplot2 · terra · ragg</dd></div>
+          <div><dt>Data</dt><dd>OpenStreetMap · Snapshot reported 15 July 2026</dd></div>
+        </dl>
+        <div class="detail-actions">
+          <a class="btn" href="map.png" target="_blank" rel="noopener">VIEW FULL IMAGE ↗</a>
+          <a class="btn" href="map.png" download>DOWNLOAD PNG ↓</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail-notes">
+      <section aria-labelledby="idea-heading">
+        <h2 id="idea-heading">The idea</h2>
+        <p>Explore how streets, chamfered corners and open spaces shape potential visibility. Blue-grey marks more enclosed positions; mint and gold mark positions with a larger visible area. The map samples the whole selected open-space surface rather than stretching street-centre measurements across plazas. It describes the geometry of this neighbourhood without isolating the causal effect of any one design feature.</p>
+      </section>
+      <section aria-labelledby="method-heading">
+        <h2 id="method-heading">How it was made</h2>
+        <p>Real OSM footprints were validated and merged in EPSG:25831. A 5 m grid divides street-connected spaces and mapped pedestrian areas; each clipped cell component has its own observer. From 8,833 positions, rays sweep 360° and stop at the first building or 150 m. Extra rays at building corners resolve occlusion changes. Every isovist passed building-overlap and independent sightline checks. Colour is linear from 0 to 30,000 m². A single rasterised fill removes cell seams; analytical resolution remains 5 m. The poster is 3000 × 3600 pixels. <a href="workflow.zip" download>Download the reproducible R workflow, exact source snapshot and validation reports (ZIP)</a>.</p>
+      </section>
+      <section aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; limitations</h2>
+        <p>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, via the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>, under <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>. The provider reported a snapshot of 15 July 2026; the original download was 4 November 2026. This is a horizontal, 360° building-only model: heights, terrain, trees, vehicles, windows and street furniture are omitted. Isolated courtyards are excluded. The derived sampling surface is not a surveyed inventory of accessible pavement, and potential visible area does not directly measure human perception.</p>
+      </section>
+    </div>
+  </main>
+  <footer>MAP BY FERNANDO FERNANDEZ · <a href="https://x.com/mappedbyfer">@MAPPEDBYFER</a> · DATA: <a href="https://www.openstreetmap.org/copyright">© OPENSTREETMAP CONTRIBUTORS</a> · <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a></footer>
+</body>
+</html>

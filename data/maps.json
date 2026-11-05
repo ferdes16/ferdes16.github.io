@@ -44,6 +44,17 @@
     "url": "maps/2026/day-04-spain-logistics/index.html"
   },
   {
+    "id": "2026-05-geometry-of-sight-dark",
+    "edition": 2026,
+    "day": 5,
+    "theme": "Senses: Sight",
+    "title": "HOW FAR CAN YOU SEE?",
+    "description": "8,833 calculated viewpoints reveal potential visible space across Barcelona’s Eixample, with mint and gold openings against a dark street grid.",
+    "status": "published",
+    "thumbnail": "maps/2026/day-05-geometry-of-sight-dark/thumbnail.png",
+    "url": "maps/2026/day-05-geometry-of-sight-dark/index.html"
+  },
+  {
     "id": "2026-06-vintage",
     "edition": 2026,
     "day": 6,
