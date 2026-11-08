@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Share of Population Aged 15–29 · Day 07 — 10 Minute Map</title>
+  <meta name="description" content="A simple municipal choropleth of Spain showing the share of residents aged 15–29, based on the 2025 INE Annual Population Census.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css?v=9">
+</head>
+<body class="map-detail-page">
+  <header>
+    <a class="brand" href="../../../index.html" aria-label="Home">HOME</a>
+    <nav class="top" aria-label="Main navigation"><a href="../../../index.html#work">PROJECTS</a><a href="../../../index.html#about">ABOUT</a><a href="../../../index.html#contact">CONTACT</a></nav>
+  </header>
+  <main class="map-detail-main">
+    <a class="back-link" href="../../../challenge/">← Back to the gallery</a>
+    <div class="detail-title">
+      <div class="eyebrow">#30DAYMAPCHALLENGE / 2026 / DAY 07 / 10 MINUTE MAP</div>
+      <h1>Share of Population Aged 15–29</h1>
+    </div>
+    <div class="detail-overview">
+      <figure class="map-preview">
+        <a href="map.png" target="_blank" rel="noopener" aria-label="View the full-size map">
+          <img src="thumbnail.png" width="1400" height="1000" alt="Municipal map of mainland Spain and Mallorca coloured by the share of residents aged 15 to 29, using a Viridis palette on a dark background.">
+        </a>
+        <figcaption>Map preview · Select the image to view it at full size.</figcaption>
+      </figure>
+      <div class="detail-summary">
+        <h2>One dataset, one join, one choropleth.</h2>
+        <p>A straightforward municipal map of the share of residents aged 15–29. The indicator is calculated from the latest INE Annual Population Census figures available in the project: 1 January 2025.</p>
+        <dl class="detail-meta">
+          <div><dt>Region</dt><dd>Peninsular Spain and Mallorca</dd></div>
+          <div><dt>Challenge</dt><dd>Day 07 · 10 Minute Map</dd></div>
+          <div><dt>Tools</dt><dd>R · sf · dplyr · ggplot2</dd></div>
+          <div><dt>Data</dt><dd>INE · 1 January 2025</dd></div>
+        </dl>
+        <div class="detail-actions">
+          <a class="btn" href="map.png" target="_blank" rel="noopener">VIEW FULL IMAGE ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail-notes">
+      <section aria-labelledby="idea-heading">
+        <h2 id="idea-heading">The idea</h2>
+        <p>Return to an introductory GIS exercise: one indicator, one municipal-code join and one choropleth. The age group 15–29 is a clear, user-defined measure for this map, not a specific INE classification or a proxy for migration, employment or growth.</p>
+      </section>
+      <section aria-labelledby="method-heading">
+        <h2 id="method-heading">How it was made</h2>
+        <p>For each municipality, the population aged 15 through 29 is divided by total population and multiplied by 100. The resulting values are joined to official municipal boundaries valid on 1 January 2025. The map includes 8,028 municipalities on the peninsula and Mallorca. The choropleth uses the Viridis continuous palette on a dark grey background.</p>
+      </section>
+      <section aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; limitations</h2>
+        <p>Population: <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=68542">INE table 68542, population by sex and age, year by year</a>. Boundaries: <a href="https://github.com/rOpenSpain/mapSpain/tree/sianedata">IGN CartoBase ANE via mapSpain</a>, CC BY 4.0. The underlying INE extract includes 8,132 municipalities; the Canary Islands, other Balearic islands, Ceuta and Melilla are outside this map's extent. The population-weighted national share is 16.5%. The mapped share describes age composition at one date, not a trend.</p>
+      </section>
+    </div>
+  </main>
+  <footer>GIS &amp; DATA VISUALIZATION PORTFOLIO — <a href="https://x.com/MappedByFer">@MAPPEDBYFER</a> · DATA: <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=68542">INE · TABLE 68542</a> · BOUNDARIES: <a href="https://github.com/rOpenSpain/mapSpain/tree/sianedata">IGN · CC BY 4.0</a></footer>
+</body>
+</html>
