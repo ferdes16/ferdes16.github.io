@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Where Spain Grows and Shrinks · Day 09 — Urban–Rural</title>
+  <meta name="description" content="Municipal population change across Spain from 2010 to 2025, mapped using official INE population figures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css?v=9">
+</head>
+<body class="map-detail-page">
+  <header>
+    <a class="brand" href="../../../index.html" aria-label="Home">HOME</a>
+    <nav class="top" aria-label="Main navigation"><a href="../../../index.html#work">PROJECTS</a><a href="../../../index.html#about">ABOUT</a><a href="../../../index.html#contact">CONTACT</a></nav>
+  </header>
+  <main class="map-detail-main">
+    <a class="back-link" href="../../../challenge/">← Back to the gallery</a>
+    <div class="detail-title">
+      <div class="eyebrow">#30DAYMAPCHALLENGE / 2026 / DAY 09 / URBAN–RURAL</div>
+      <h1>Where Spain Grows and Shrinks</h1>
+    </div>
+    <div class="detail-overview">
+      <figure class="map-preview">
+        <a href="map.png" target="_blank" rel="noopener" aria-label="View the full-size population change map">
+          <img src="thumbnail.png" width="1400" height="1120" alt="Dark municipal choropleth of Spain showing population change from 2010 to 2025 in coral, grey and turquoise, with large municipalities outlined.">
+        </a>
+        <figcaption>Map preview · Select the image to view it at full size.</figcaption>
+      </figure>
+      <div class="detail-summary">
+        <h2>Population change by municipality · 2010–2025</h2>
+        <p>A diverging municipal map shows where population increased or declined between 1 January 2010 and 1 January 2025. Large municipalities are outlined to help locate urban centres within the national pattern.</p>
+        <dl class="detail-meta">
+          <div><dt>Region</dt><dd>Spain</dd></div>
+          <div><dt>Challenge</dt><dd>Day 09 · Urban–Rural</dd></div>
+          <div><dt>Tools</dt><dd>R · sf · dplyr · ggplot2</dd></div>
+          <div><dt>Data</dt><dd>INE municipal register · 2010 &amp; 2025</dd></div>
+        </dl>
+        <div class="detail-actions">
+          <a class="btn" href="map.png" target="_blank" rel="noopener">VIEW FULL IMAGE ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail-notes">
+      <section aria-labelledby="idea-heading">
+        <h2 id="idea-heading">The idea</h2>
+        <p>The map compares official municipal population figures across fifteen years. Population change can help describe demographic geography, but it does not by itself classify a municipality as urban or rural.</p>
+      </section>
+      <section aria-labelledby="method-heading">
+        <h2 id="method-heading">How it was made</h2>
+        <p>For each municipality with a reliable geographic comparison, percentage change is calculated as (2025 population − 2010 population) / 2010 population × 100. The map uses seven diverging classes. A black outline with a soft amber halo marks the 153 municipalities with more than 50,000 residents in 2025. Two verified municipal mergers were harmonised by summing predecessor populations; other cases with boundary changes or missing correspondence are left unclassified. In total, 8,046 municipalities are comparable and 86 are shown as not comparable.</p>
+      </section>
+      <section aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; limitations</h2>
+        <p>Population: <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=29005">INE table 29005, official municipal population figures</a>, as of 1 January 2010 and 2025. Boundaries: <a href="https://github.com/rOpenSpain/mapSpain/tree/sianedata">IGN CartoBase ANE via mapSpain</a>, CC BY 4.0. The map shows population change, not its causes: it does not separate natural change from migration, and changes in municipal boundaries limit comparisons for some places.</p>
+      </section>
+    </div>
+  </main>
+  <footer>GIS &amp; DATA VISUALIZATION PORTFOLIO — <a href="https://x.com/MappedByFer">@MAPPEDBYFER</a> · DATA: <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=29005">INE · TABLE 29005</a> · BOUNDARIES: <a href="https://github.com/rOpenSpain/mapSpain/tree/sianedata">IGN · CC BY 4.0</a></footer>
+</body>
+</html>

@@ -75,5 +75,16 @@
     "status": "published",
     "thumbnail": "maps/2026/day-07-youth-share/thumbnail.png",
     "url": "maps/2026/day-07-youth-share/index.html"
+  },
+  {
+    "id": "2026-09-spain-population-change",
+    "edition": 2026,
+    "day": 9,
+    "theme": "Urban–Rural",
+    "title": "Where Spain Grows and Shrinks",
+    "description": "A municipal choropleth maps percentage population change across Spain from 2010 to 2025, with large municipalities outlined for context.",
+    "status": "published",
+    "thumbnail": "maps/2026/day-09-urban-rural/thumbnail.png",
+    "url": "maps/2026/day-09-urban-rural/index.html"
   }
 ]
