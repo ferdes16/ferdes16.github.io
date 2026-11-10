@@ -86,5 +86,16 @@
     "status": "published",
     "thumbnail": "maps/2026/day-09-urban-rural/thumbnail.png",
     "url": "maps/2026/day-09-urban-rural/index.html"
+  },
+  {
+    "id": "2026-10-tenochtitlan",
+    "edition": 2026,
+    "day": 10,
+    "theme": "Prompting only",
+    "title": "Tenochtitlan 1519 — Expanded Canal Network",
+    "description": "A prompt-led visual interpretation of Tenochtitlan, with an illustrated island core, causeways and expanded canal network.",
+    "status": "published",
+    "thumbnail": "maps/2026/day-10-tenochtitlan/thumbnail.png",
+    "url": "maps/2026/day-10-tenochtitlan/index.html"
   }
 ]
