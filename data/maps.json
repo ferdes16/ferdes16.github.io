@@ -97,5 +97,16 @@
     "status": "published",
     "thumbnail": "maps/2026/day-10-tenochtitlan/thumbnail.png",
     "url": "maps/2026/day-10-tenochtitlan/index.html"
+  },
+  {
+    "id": "2026-11-sound-freiburg",
+    "edition": 2026,
+    "day": 11,
+    "theme": "Senses: Sound",
+    "title": "The Sound of Freiburg",
+    "description": "Official 2022 road traffic noise contours reveal Freiburg’s louder corridors, with parks, woodland and water shown as context for relative quiet.",
+    "status": "published",
+    "thumbnail": "maps/2026/day-11-sound-freiburg/thumbnail.png",
+    "url": "maps/2026/day-11-sound-freiburg/index.html"
   }
 ]
