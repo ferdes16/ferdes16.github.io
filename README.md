@@ -22,6 +22,8 @@ A growing collection of maps exploring open data, geographic patterns and differ
 
 - **[Day 02 · Lines — Germany’s Traffic Intensity](https://mappedbyfer.com/maps/2026/day-02-germany-road-traffic/)**: Germany’s motorways and major roads mapped through seven classes of modelled daily vehicle traffic. Created in R using G-SWIFT / NILU–KNMI data and OSM-derived road geometry.
 
+- **[Day 11 · Senses: Sound — The Sound of Freiburg](https://mappedbyfer.com/maps/2026/day-11-sound-freiburg/)**: Official 2022 modelled road traffic noise, with parks, woodland and water shown as urban context.
+
 ## Areas of interest
 
 - Spatial data engineering and geospatial analysis.
